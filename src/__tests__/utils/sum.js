@@ -1,4 +1,4 @@
-import { sum } from "../utils/sum";
+import { sum } from '../../utils/sum';
 
 describe('sum function', () => {
     it('should equal 3 when 1 and 2 have been given', () => {
