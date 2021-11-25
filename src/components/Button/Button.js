@@ -10,7 +10,7 @@ function Button({ label = 'OK' }) {
 
     return (
         <button onClick={handleClick}>
-            { label } {counter}
+            { label } <span>{counter}</span>
         </button>
     );
 }

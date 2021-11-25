@@ -6,6 +6,8 @@ exports[`<Button /> testing using snapshots renders Button with label "Click me 
 >
   Click me
    
-  0
+  <span>
+    0
+  </span>
 </button>
 `;
