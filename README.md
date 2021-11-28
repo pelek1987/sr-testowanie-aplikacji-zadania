@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+##Zadanie 1
+Napisz test jednostkowy korzystając z Jest, który sprawdzi poprawność działania funkcji sum polegającą na dodawaniu dwóch argumentów (a i b).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Następnie napisz funkcję sum i zaimportuj ją do pliku z testem.
 
-## Available Scripts
+##Zadanie 2
+Nie korzystając z przeglądarki (skup się na razie tylko na terminalu) napisz komponent, który będzie posiadał dwa przyciski: - oraz +. Po kliknięciu w każdy z nich odpowiednio zwiększy i zmniejszy stan licznika. Licznik wyświetl na ekranie. Domyślny stan licznika to 0, ale udostępnij jego zmianę poprzez props (np. start).
 
-In the project directory, you can run:
+Napisz pole typu input oraz przycisk obok (np. Zmień). Jeśli wprowadzisz liczbę do pola (np. 99) i naciśniesz przycisk, to stan początkowy licznika powinien zmienić się na tę liczbę. Przyciski - oraz + powinny analogicznie odejmować i dodawać w zależności od tej liczby, która jest stanem początkowym licznika.
 
-### `npm start`
+Wprowadź przycisk Reset, który będzie resetował licznik do jego stanu początkowego (0 lub wartości propsa start).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Napisz testy do Twojego komponentu, które sprawdzą:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+czy stan początkowy komponentu wynosi 0 jeśli nie przekażemy propsa start
+czy stan początkowy komponentu wynosi 10 jeśli przekażemy propsa start równy 10
+czy komponent posiada przyciski do dodawania oraz odejmowania
+czy po kliknięciu w przyciski stan odpowiednio się modyfikuje
+czy po wpisaniu liczby w pole tekstowe oraz naciśnięcię przycisku Zmień zmienia się stan przycisku
+po naciśnięciu przycisku Reset stan licznika zmieni się na początkowy
+Po napisaniu testów (o ile przechodzą na zielono). Zobacz swój komponent w przeglądarce i sprawdź działanie.
 
-### `npm test`
+##Zadanie 2*
+Spróbuj wykonać zadanie 2 w odwrotnej kolejności, tzn. najpierw zaprojektuj testy - na ich podstawie znasz wymagania, jak ma działać komponent. Potem napisz kod Twojego komponentu równolegle z uzupełnianiem testów.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##Zadanie 3
+Jeeli wykonałeś / wykonałaś zadanie z REST API, napisz testy do komponentów. Testy niech sprawdzają ile komponentów User znajduje się w komponencie UserList. Sprawdź co się stanie, jeśli do UserList przekażesz pustą tablicę.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Zadanie 4
+Napisz testy E2E z zadania nr 2 wykorzystując Cypress
