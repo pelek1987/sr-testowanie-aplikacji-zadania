@@ -4,6 +4,6 @@ function DumbButton({ label, onClick }) {
     );
 }
 
-DumbButton.displayName = 'DumbButton'
+// DumbButton.displayName = 'DumbButton'
 
 export default DumbButton;

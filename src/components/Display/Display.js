@@ -1,11 +1,11 @@
 function Display({ value }) {
     return (
-        <div>
+        <div className="Display">
             Licznik: { value }
         </div>
     );
 }
 
-Display.displayName = "Display";
+// Display.displayName = "Display";
 
 export default Display;

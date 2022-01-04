@@ -1,6 +1,6 @@
 import TestRenderer from 'react-test-renderer';
 import { shallow } from 'enzyme'
-import Button from "../../components/Button";
+import Button from "../../../components/Button";
 
 describe('<Button /> testing using snapshots', () => {
     it.skip('renders Button with label "Click me 0"', () => {
@@ -39,7 +39,7 @@ describe('<Button /> testing using enzyme' , () => {
         let counter = wrapper.find('button span');
         expect(counter.text()).toBe('0');
         button.simulate('click')
-        counter = counter = wrapper.find('button span');
+        counter = wrapper.find('button span');
         expect(counter.text()).toBe('1');
     });
 })

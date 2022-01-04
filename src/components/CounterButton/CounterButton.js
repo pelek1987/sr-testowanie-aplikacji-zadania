@@ -1,6 +1,6 @@
-function CounterButton({ label, handleCounterChange, actionType, payload }) {
+function CounterButton({ label, onClick }) {
     return (
-        <button onClick={() => handleCounterChange(actionType, payload)}>
+        <button onClick={onClick}>
             {label}
         </button>
     );
