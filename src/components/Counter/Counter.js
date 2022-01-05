@@ -1,4 +1,4 @@
-import {useState, useEffect, useReducer} from "react";
+import {useState, useReducer, useEffect} from "react";
 import Display from "../Display";
 // import CounterButton from "../CounterButton";
 import Input from "../Input";
@@ -11,11 +11,14 @@ const actions = {
     RESET: 'RESET'
 }
 
-const initialState = {
-    count: 0
-};
+function init(initialValue) {
+    return ({
+        count: initialValue
+    })
+}
 
 function counterReducer(state, action) {
+
     switch (action.type) {
         case actions.SET_NEW:
             return {count: action.payload};
@@ -24,7 +27,7 @@ function counterReducer(state, action) {
         case actions.DEC:
             return {count: state.count - action.payload};
         case actions.RESET:
-            return {count: 0};
+            return init(action.payload);
         default:
             return state;
     }
@@ -32,14 +35,12 @@ function counterReducer(state, action) {
 
 function Counter({start = 0}) {
     const [inputValue, setInputValue] = useState('');
-    useEffect(() => {
-        dispatch({
-            type: actions.SET_NEW,
-            payload: start
-        })
-    }, [start]);
 
-    const [counterState, dispatch] = useReducer(counterReducer, initialState);
+    useEffect(()=> {
+        dispatch({type: actions.SET_NEW, payload: start})
+    }, [start])
+
+    const [counterState, dispatch] = useReducer(counterReducer, start, init);
 
     const handleInputChange = ({ target: { value }}) => {
         setInputValue(value);
@@ -57,7 +58,7 @@ function Counter({start = 0}) {
         <div>
             <Display value={counterState.count} />
             <DumbButton label='+' onClick={() => dispatch({type: actions.INC, payload: 1})} />
-            <DumbButton label='Reset' onClick={() => dispatch({type: actions.RESET})} />
+            <DumbButton label='Reset' onClick={() => dispatch({type: actions.RESET, payload: start})} />
             <DumbButton label='-' onClick={() => dispatch({type: actions.DEC, payload: 1})} />
             <Input
                 id="counterValue"
